@@ -9,72 +9,84 @@
 
   <style>
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #f5f5f5;
-  color: #333;
-  overflow: hidden;
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
 
-.container {
-  width: 100%;
-  max-width: 400px;
-}
+    .logout-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      margin: 20px;
+    }
 
-.card {
-  width: 100%;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
 
-h2 {
-  text-align: center;
-  color: #333;
-}
+    p {
+      margin-bottom: 20px;
+      color: #666;
+    }
 
-button {
-  background-color: #ff4500;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
+    .logout-btn {
+      padding: 10px 20px;
+      /* background-color: #FF6F61; */
+      background-color: red;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-button:hover {
-  background-color: #e63900;
-}
+    .logout-btn:hover {
+      background-color: #e55a50;
+    }
 
-p {
-  text-align: center;
-  padding: 23px 0 15px;
-}
-.logout-btn {
-			margin-left:auto;
-			margin-right:auto;
-			justify-content: center;
-  			align-items: center;
-			display: grid;  
-}
+    /* Responsive  */
+    @media (max-width: 600px) {
+      .logout-container {
+        padding: 15px;
+      }
 
+      .logout-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+      .logout-container {
+        padding: 20px;
+      }
+
+      .logout-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    }
   </style>
 
 </head>
 
 <body>
-  <div class="logout-container container">
-    <div class="card">
-      <h2>Welcome!</h2>
+  <div class="logout-container">
+    <h2>Welcome!</h2>
     <p>You are now logged in.</p>
     <button class="logout-btn" onclick="logout()">Logout</button>
-    </div>
   </div>
   <script src="src/logout.js"></script>
 </body>
